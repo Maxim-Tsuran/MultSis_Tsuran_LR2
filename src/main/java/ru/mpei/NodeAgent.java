@@ -13,6 +13,9 @@ public class NodeAgent extends Agent {
         AgentCfg agentCfg = XmlSerialization.deserialize(AgentCfg.class, args[0].toString());
         System.out.println(this.getLocalName() + " starts work");
 
+
+
+
         if (agentCfg.getInitiator().equals("True")) {
             addBehaviour(new InitBehaviour(agentCfg));
             addBehaviour(new FinalBehaviour(agentCfg));
